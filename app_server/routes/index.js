@@ -1,9 +1,15 @@
 const express = require('express');
 const router = express.Router();
-const cntrlMain = require('../controllers/main');
+const cntrlLocations = require('../controllers/locations');
+const cntrlOthers = require('../controllers/others');
 
-/* GET home page. */
-router.get('/',cntrlMain.index);
+/* GET locations page */
+router.get('/',cntrlLocations.homeList);
+router.get('/location',cntrlLocations.locInfo);
+router.get('/location/review/new',cntrlLocations.addReview);
+
+/* GET About page. */
+router.get('/about',cntrlOthers.about);
 module.exports = router;
 
 
