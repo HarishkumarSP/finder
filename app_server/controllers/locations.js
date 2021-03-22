@@ -1,32 +1,32 @@
 /* GET home page */
 const homeList = (req,res)=>{
     res.render('location-list',{
-        title :'Finder-find a place to work with wifi',
+        title :'Finder-find a place to work with wifi and best foods',
         pageHeader:{
             title:'Finder',
-            strapline:'Find a place to work with wifi near you!'
+            strapline:'Find a place to work with wifi near you and best foods!'
         },
-        sidebar: "Looking for wifi and a seat? Finder helps you find places to work when out and about. Perhaps with coffee, cake or a pint? Let Finder help you find the place you're looking for.",
+        sidebar: "Looking for wifi and a seat? Finder helps you find places to work when out and about. Perhaps with food, cake or a pint? Let Finder help you find the place you're looking for.",
         locations:[{
-             name:'Starbucks',
-             address:'125 High Street, Reading, RG6 1PS',
+             name:'Hotel Sree Sabarees',
+             address:'1, Pankajam Colony, Kamarajar Salai, Tamil Nadu 625009',
              ratings:4,
              distance:'100m',
-             facilities:['Hot drinks','Food','Premium wifi']
+             facilities:['Hot drinks','Foods and salads','Ice cream','Pure veg']
         },
         {
-            name:'Tea stall',
-            address:'125 High Street, Reading, RG6 1PS',
-            ratings:3,
+            name:'Domino\'s Pizza',
+            address:'Domino\'s Pizza Ground Floor, SHIVSHAKTI Plaza, No. 28, 80 Feet Road Main Gate, Opposite WACKBOARD College, Managiri, KK Nagar,Madurai',
+            ratings:4,
             distance:'200m',
-            facilities:['Hot drinks','Biscuits','Television']
+            facilities:['tasty pizzas','Beverages','Television','Premium wifi']
        },
        {
-        name:'Pizza hut',
-        address:'125 High Street, Reading, RG6 1PS',
+        name:'Madurai Bun Parotta Kadai ',
+        address:'Madurai Bun Parotta Kadai Avin Signal, Managiri, KK Nagar, Tamil Nadu 625020',
         ratings:5,
         distance:'400m',
-        facilities:['tasty pizzas','Beverages','Natural place']
+        facilities:['tasty parottas','Non-veg specials']
    }]
     });
 };
@@ -35,7 +35,7 @@ const homeList = (req,res)=>{
 const locInfo = (req, res) => {
     res.render('location-info',
       {
-        title: 'Starbucks',
+        title: 'Hotel Sree Sabarees',
          pageHeader: {
           title: 'Finder',
         },
@@ -44,11 +44,11 @@ const locInfo = (req, res) => {
           callToAction: 'If you\'ve been and you like it - or if you don\'t - please leave a review to help other people just like you.'
         },
         location: {
-          name: 'Starbucks',
-          address: '125 High Street, Reading, RG6 1PS',
+          name: 'Hotel Sree Sabarees',
+          address: '1, Pankajam Colony, Kamarajar Salai, Tamil Nadu 625009',
           ratings: 4,
-          facilities: ['Hot drinks', 'Food', 'Premium wifi'],
-          coords: {lat: 9.920962, lng: 78.125746},
+          facilities: ['Hot drinks','Foods and salads','Ice cream','Pure veg'],
+          coords: { lng: 78.144920, lat: 9.913230},
           openingTimes: [
             {
               days: 'Monday - Friday',
@@ -69,15 +69,15 @@ const locInfo = (req, res) => {
           ],
           reviews: [
             {
-              author: 'Simon Holmes',
+              author: 'Harish',
               rating: 5,
-              timestamp: '16 July 2013',
+              timestamp: '14 June 2018',
               reviewText: 'What a great place. I can\'t say enough good things about it.'
             },
             {
-              author: 'Charlie Chaplin',
+              author: 'Kishore',
               rating: 3,
-              timestamp: '16 June 2013',
+              timestamp: '16 July 2018',
               reviewText: 'It was okay. Coffee wasn\'t great, but the wifi was fast.'
             }
           ]
@@ -99,3 +99,5 @@ module.exports = {
     locInfo,
     addReview     
 }
+
+
