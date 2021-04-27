@@ -32,7 +32,7 @@ block content
           .card.card-primary
             .card-block
               h2.card-title Location map
-              img.img-fluid.rounded(src=`https://maps.googleapis.com/maps/api/staticmap?center=40.714%2c%20-73.998&zoom=12&size=400x400&key=AIzaSyAdk1E_E029eHf-0P_sK57cTYFj2ygJeSc`)
+              img.img-fluid.rounded(src=`https://maps.googleapis.com/maps/api/staticmap?center=${location.coords.lat},${location.coords.lng}&zoom=12&size=400x400&key=AIzaSyAdk1E_E029eHf-0P_sK57cTYFj2ygJeSc`)
       .row
         .col-12
           .card.card-primary.review-card
@@ -45,7 +45,7 @@ block content
                    span.rating 
                     +outputRating(review.rating)
                    span.reviewAuthor  #{review.author}
-                   small.reviewTimestamp  #{review.timestamp}
+                   small.reviewTimestamp  #{review.createdOn}
                 .col-12
                   p !{(review.reviewText).replace(/\n/g, '<br/>')}  
     .col-12.col-lg-3
