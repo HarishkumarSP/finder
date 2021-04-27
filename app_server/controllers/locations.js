@@ -13,7 +13,7 @@ const homeList = (req,res) => {
     url: `${apiOptions.server}${path}`,
     method: 'GET',
     json: {},
-    qs: {
+    qs: { 
     lng: 78.143874,
     lat:  9.931301,
     maxDistance: 20
